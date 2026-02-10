@@ -57,15 +57,30 @@ const getCleanObservation = (fullObs) => {
     return fullObs.trim().length > 0 ? fullObs : null;
 };
 
-// --- ÍCONE GUIGO (CABELO VOLUMOSO + ÓCULOS REDONDOS) ---
+// --- ÍCONE GUIGO (VERSÃO BLACK/CACHEADO VOLUMOSO) ---
 const GuigoAvatar = ({ size = 100 }) => (
   <svg width={size} height={size} viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+    {/* Fundo */}
     <circle cx="100" cy="100" r="95" fill="#E0F2FE" />
     <circle cx="100" cy="100" r="90" stroke="#3B82F6" strokeWidth="4" strokeDasharray="8 6"/>
-    <path d="M60 90C50 80 50 60 65 50C75 30 95 25 110 25C125 25 145 30 155 50C170 60 170 80 160 90" stroke="#4B2C20" strokeWidth="14" strokeLinecap="round" fill="none"/>
-    <path d="M70 55C75 45 85 45 90 55" stroke="#4B2C20" strokeWidth="8" strokeLinecap="round"/>
-    <path d="M130 55C135 45 145 45 150 55" stroke="#4B2C20" strokeWidth="8" strokeLinecap="round"/>
+
+    {/* CABELO (BASE DE TRÁS) - Vários círculos preenchidos para dar volume */}
+    <circle cx="100" cy="95" r="50" fill="#4B2C20" /> 
+    <circle cx="65" cy="100" r="30" fill="#4B2C20" /> 
+    <circle cx="135" cy="100" r="30" fill="#4B2C20" /> 
+    <circle cx="100" cy="60" r="35" fill="#4B2C20" /> 
+    <circle cx="70" cy="70" r="28" fill="#4B2C20" /> 
+    <circle cx="130" cy="70" r="28" fill="#4B2C20" /> 
+
+    {/* ROSTO (Sobre o cabelo de trás) */}
     <path d="M100 165C130 165 150 140 150 105C150 75 130 55 100 55C70 55 50 75 50 105C50 140 70 165 100 165Z" fill="#FFDFC4" />
+    
+    {/* CABELO (DETALHES DA TESTA/FRANJA) - Círculos menores na frente */}
+    <circle cx="100" cy="58" r="15" fill="#4B2C20" /> 
+    <circle cx="80" cy="65" r="12" fill="#4B2C20" /> 
+    <circle cx="120" cy="65" r="12" fill="#4B2C20" /> 
+
+    {/* ÓCULOS E ROSTO */}
     <circle cx="75" cy="110" r="18" stroke="#1E3A8A" strokeWidth="4" fill="rgba(255,255,255,0.3)" />
     <circle cx="125" cy="110" r="18" stroke="#1E3A8A" strokeWidth="4" fill="rgba(255,255,255,0.3)" />
     <line x1="93" y1="110" x2="107" y2="110" stroke="#1E3A8A" strokeWidth="4" />
