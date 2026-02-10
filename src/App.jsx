@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { BrowserRouter as Router, Routes, Route, Navigate, Link, useLocation, useNavigate } from 'react-router-dom';
+import { HashRouter as Router, Routes, Route, Navigate, Link, useLocation, useNavigate } from 'react-router-dom';
 import { 
   Wallet, Users, Calendar, User, LogOut, Camera, X, 
   Loader2, TrendingDown, TrendingUp, PiggyBank, FileText, 
